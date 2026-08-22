@@ -1,147 +1,51 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#08090D">
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="#090A10">
 
-    <LinearLayout
-        android:id="@+id/mainContent"
-        android:orientation="vertical"
-        android:padding="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:text="HM"
-            android:textColor="#FFFFFF"
-            android:textSize="38sp"
-            android:textStyle="bold"
-            android:letterSpacing="0.18"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:text="MUSIC PLAYER  •  V2"
-            android:textColor="#777D8D"
-            android:textSize="10sp"
-            android:letterSpacing="0.25"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id="@+id/search"
-            android:hint="Search songs, artists or albums"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#6E7482"
-            android:singleLine="true"
-            android:paddingStart="18dp"
-            android:paddingEnd="18dp"
-            android:backgroundTint="#292D38"
-            android:layout_marginTop="22dp"
-            android:layout_width="match_parent"
-            android:layout_height="54dp"/>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginTop="24dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:text="YOUR MUSIC"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:letterSpacing="0.05"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:text="ALL"
-                android:textColor="#858A99"
-                android:textSize="11sp"
-                android:letterSpacing="0.15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+    <LinearLayout android:id="@+id/mainContent" android:orientation="vertical" android:padding="18dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="62dp">
+            <TextView android:text="HM" android:textColor="#FFFFFF" android:textSize="36sp" android:textStyle="bold" android:letterSpacing="0.22" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+            <TextView android:text="•••" android:textColor="#FFFFFF" android:textSize="22sp" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
         </LinearLayout>
 
-        <ListView
-            android:id="@+id/songList"
-            android:divider="#151821"
-            android:dividerHeight="1dp"
-            android:paddingTop="10dp"
-            android:clipToPadding="false"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
+        <TextView android:text="YOUR SOUND. YOUR WAY." android:textColor="#73798A" android:textSize="10sp" android:letterSpacing="0.22" android:layout_marginBottom="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:gravity="center"
-            android:padding="16dp"
-            android:background="#141720"
-            android:layout_width="match_parent"
-            android:layout_height="90dp">
+        <EditText android:id="@+id/search" android:hint="⌕  Search songs, artists, albums" android:textColor="#FFFFFF" android:textColorHint="#707687" android:textSize="14sp" android:singleLine="true" android:paddingStart="16dp" android:paddingEnd="16dp" android:backgroundTint="#292D38" android:layout_width="match_parent" android:layout_height="52dp"/>
 
-            <TextView
-                android:text="NOW PLAYING"
-                android:textColor="#747B8B"
-                android:textSize="9sp"
-                android:letterSpacing="0.20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+        <HorizontalScrollView android:scrollbars="none" android:layout_marginTop="16dp" android:layout_width="match_parent" android:layout_height="46dp">
+            <LinearLayout android:orientation="horizontal" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent">
+                <TextView android:text="SONGS" android:textColor="#FFFFFF" android:textStyle="bold" android:background="#20242E" android:paddingStart="18dp" android:paddingEnd="18dp" android:gravity="center" android:layout_width="wrap_content" android:layout_height="36dp"/>
+                <TextView android:text="ARTISTS" android:textColor="#777D8C" android:paddingStart="18dp" android:paddingEnd="18dp" android:gravity="center" android:layout_width="wrap_content" android:layout_height="36dp"/>
+                <TextView android:text="ALBUMS" android:textColor="#777D8C" android:paddingStart="18dp" android:paddingEnd="18dp" android:gravity="center" android:layout_width="wrap_content" android:layout_height="36dp"/>
+                <TextView android:text="FOLDERS" android:textColor="#777D8C" android:paddingStart="18dp" android:paddingEnd="18dp" android:gravity="center" android:layout_width="wrap_content" android:layout_height="36dp"/>
+            </LinearLayout>
+        </HorizontalScrollView>
 
-            <TextView
-                android:text="Select a song"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:layout_marginTop="5dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+        <LinearLayout android:gravity="center_vertical" android:layout_marginTop="16dp" android:layout_width="match_parent" android:layout_height="42dp">
+            <TextView android:text="LIBRARY" android:textColor="#FFFFFF" android:textSize="20sp" android:textStyle="bold" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+            <TextView android:text="↻  RESCAN" android:textColor="#858B9B" android:textSize="10sp" android:letterSpacing="0.12" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
 
-            <TextView
-                android:text="••••••••••••••••••••"
-                android:textColor="#FFFFFF"
-                android:textSize="10sp"
-                android:letterSpacing="0.15"
-                android:layout_marginTop="4dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+        <ListView android:id="@+id/songList" android:divider="#151821" android:dividerHeight="1dp" android:paddingTop="4dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+
+        <LinearLayout android:orientation="vertical" android:gravity="center_vertical" android:paddingStart="18dp" android:paddingEnd="10dp" android:background="#171A24" android:layout_marginTop="10dp" android:layout_width="match_parent" android:layout_height="84dp">
+            <TextView android:text="NOW PLAYING" android:textColor="#747B8B" android:textSize="9sp" android:letterSpacing="0.20" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="52dp">
+                <TextView android:text="Select a song" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+                <TextView android:text="◀   ▶" android:textColor="#FFFFFF" android:textSize="18sp" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:gravity="center" android:layout_marginTop="8dp" android:layout_width="match_parent" android:layout_height="48dp">
+            <TextView android:text="⌂  HOME" android:textColor="#FFFFFF" android:textSize="10sp" android:letterSpacing="0.12" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"/>
+            <TextView android:text="♡  FAVORITES" android:textColor="#73798A" android:textSize="10sp" android:letterSpacing="0.08" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"/>
+            <TextView android:text="☰  PLAYLISTS" android:textColor="#73798A" android:textSize="10sp" android:letterSpacing="0.08" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"/>
+            <TextView android:text="⚙  SETTINGS" android:textColor="#73798A" android:textSize="10sp" android:letterSpacing="0.08" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"/>
         </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/loading"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:background="#08090D"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:text="HM"
-            android:textColor="#FFFFFF"
-            android:textSize="72sp"
-            android:textStyle="bold"
-            android:letterSpacing="0.20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:text="MUSIC PLAYER"
-            android:textColor="#858A99"
-            android:textSize="12sp"
-            android:letterSpacing="0.32"
-            android:layout_marginTop="4dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <ProgressBar
-            android:indeterminate="true"
-            android:layout_marginTop="28dp"
-            android:layout_width="30dp"
-            android:layout_height="30dp"/>
+    <LinearLayout android:id="@+id/loading" android:orientation="vertical" android:gravity="center" android:background="#090A10" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:text="HM" android:textColor="#FFFFFF" android:textSize="76sp" android:textStyle="bold" android:letterSpacing="0.24" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:text="HM  •  MUSIC PLAYER" android:textColor="#858A99" android:textSize="11sp" android:letterSpacing="0.30" android:layout_marginTop="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <ProgressBar android:indeterminate="true" android:layout_marginTop="28dp" android:layout_width="28dp" android:layout_height="28dp"/>
     </LinearLayout>
 </FrameLayout>
